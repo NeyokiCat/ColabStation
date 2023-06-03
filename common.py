@@ -48,6 +48,8 @@ def if_exsist(usr): # Check if user already exsist
     for i in acc0:
         if i[1] == usr:
             return True
+    
+    return False
         
 
 def create_user(usr,pwd): # Create a new account

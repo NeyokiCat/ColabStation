@@ -1,0 +1,74 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Colab工作站</title>
+    <link rel="stylesheet" href="/assets/css/login.css">
+</head>
+
+<style>
+    @media (prefers-color-scheme: dark) {
+        body, div, table, th, td {
+            color: #eee;
+            background: #121212;
+        }
+    }
+
+    @media (prefers-color-scheme: light) {
+        body, div, table, th, td {
+            color: #121212;
+            background: #eee;
+        }
+    }
+</style>
+
+<body>
+    <div id="app" class="container rounded shadow-sm main">
+        <div class="card">
+            <div class="card-body text-center d-flex flex-column align-items-center">
+                <h5>登录</h5>
+            </div>
+            <form>
+                <div class="Login">
+                    <input class="form-control" v-model="username" type="text" name="username"
+                        placeholder="您的账号">
+                </div>
+                <div class="Login">
+                    <input class="form-control" v-model="password" type="password" name="password"
+                        placeholder="您的密码">
+                </div>
+                <div class="Login">
+                </div>
+                <button class="btn btn-primary d-block w-100" type="button"
+                    v-if="scoreString != '登录中...'" @click="valid">登录</button>
+            </form>
+        <div>
+            <a href="/foundpassword/index">忘记密码？</a>
+        </div>
+    </div>
+</body>
+
+<footer>
+    <div class="container py-4 py-lg-5">
+        <div class="row justify-content-center">
+            <div class="col-sm-4 col-md-3 text-center text-lg-left d-flex flex-column">
+                <h3 class="font-weight-bold" style="font-size: 1rem;">关于</h3>
+            </div>
+            <div class="col-sm-4 col-md-3 text-center text-lg-left d-flex flex-column">
+                </a><a href="https://github.com/NeyokiCat/ColabStation/blob/master/LICENSE">
+                    <p style="color: rgb(108,117,125);">公开代码协议</p>
+                </a>
+            </div>
+            <div class="col-sm-4 col-md-3 text-center text-lg-left d-flex flex-column">
+                <h3 class="font-weight-bold" style="font-size: 1rem;">链接</h3>
+                <ul class="list-unstyled">
+                    <li><a class="text-muted" href="https://github.com/NeyokiCat/ColabStation">仓库地址</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex justify-content-between pt-3" style="background: var(--bs-gray-100);">
+            <p class="text-muted mb-0">Copyright © 2023 NeyokiCat</p>
+        </div>
+    </div>
+</footer>
