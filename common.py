@@ -1,7 +1,16 @@
 import csv
+import os
+
+data = []
+database_path = os.path.join(os.path.dirname(__file__),'database')
+database = os.listdir(database_path)
+
+# print(database_path)
+# print(database)
+
 def loadCSV(filename,code=0):
     data = []
-    path_to_data = './database/' + filename + ".csv"
+    path_to_data = os.path.join(database_path,filename)
     if code == 0:
         with open(path_to_data) as csvfile: 
             tag = next(csv.reader(csvfile)) # read the first line as tags
@@ -9,8 +18,10 @@ def loadCSV(filename,code=0):
                 data.append(row)
     return [filename,path_to_data,tag,data]
 
-data = [loadCSV('acc0'),loadCSV('status')]
-#print(data)
+for file in database:
+    data.append(loadCSV(file))
+    
+# print(data)
 
 acc0 = data[0][3]
 status = data[1][3]

@@ -10,8 +10,9 @@ def main():
 def hello(name=None):
     return render_template('hello.html', name=name)
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/login/', methods=['GET', 'POST'])
 def login():
+    render_template('login.html', error=error)
     error = None
     if request.method == 'POST':
         if valid_login(request.form['username'],
