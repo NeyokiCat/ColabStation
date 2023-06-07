@@ -19,3 +19,5 @@ def scan_for_env():
             print(dir)
             find_env(os.path.join(PATH_to_Collection,dir))
             print("")
+
+scan_for_env()
