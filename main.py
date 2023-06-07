@@ -2,8 +2,6 @@ import os
 
 PATH = os.path.dirname(__file__)
 PATH_to_Collection = os.path.join(os.path.dirname(__file__),"COllections")
-PATH_to_Whisper = os.path.join(PATH_to_Collection,"Whisper")
-PATH_to_ecoute = os.path.join(PATH_to_Collection,"ecoute")
 
 def find_env(path):
     for root, dirs, files in os.walk(path):
@@ -15,4 +13,9 @@ def find_env(path):
     print("Can't find env")
     return False
 
-find_env(PATH_to_ecoute)
+def scan_for_env():
+    for dir in os.listdir(PATH_to_Collection):
+        if os.path.isdir(os.path.join(PATH_to_Collection, dir)):
+            print(dir)
+            find_env(os.path.join(PATH_to_Collection,dir))
+            print("")
