@@ -4656,7 +4656,6 @@ Collections/GPT2Detector/README_FIRST.txt
 Collections/GPT2Detector/requirements.txt
 Collections/GPT2Detector/run.bat
 Collections/novelai-webui-aki-v2/
-Collections/Put Your Projects Here.txt
 Collections/Whisper/.flake8
 Collections/Whisper/.gitattributes
 Collections/Whisper/.github/workflows/python-publish.yml
