@@ -161,5 +161,4 @@ cython_debug/
 Design/*
 Collections/*
 Shortcuts/*
-ENV/models/*
 ENV/icons/*
