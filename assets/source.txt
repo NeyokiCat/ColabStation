@@ -1,0 +1,14 @@
+## This documents are use for referencing some git respositories, feel free to add ##
+
+# ffmpeg-master
+https://git.ffmpeg.org/ffmpeg.git
+
+# Whisper
+https://github.com/openai/whisper.git
+
+# Stable-Diffusion-webui (AUTOMATIC1111)
+https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
+
+# Stable-Diffusion-webui (Akegarasu)
+https://github.com/Akegarasu/stable-diffusion-webui.git
+
