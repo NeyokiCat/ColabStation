@@ -1,7 +1,9 @@
 from flask import Flask, request, url_for, render_template, redirect, flash, session
+from flaskwebgui import FlaskUI
 from common import valid_login, log_user_in, if_exsist, create_user
 
 app = Flask(__name__)
+ui = FlaskUI(app, width=1200, height=800)
 
 @app.route('/')
 def main():
@@ -61,3 +63,6 @@ def login():
 def logout():
     session.clear()
     return redirect(url_for('index'))
+
+if __name__ == '__main__':
+    app.run()
