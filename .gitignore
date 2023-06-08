@@ -160,5 +160,8 @@ cython_debug/
 #.idea/
 Design/*
 Collections/*
+<<<<<<< Updated upstream
 Shortcuts/*
+=======
+>>>>>>> Stashed changes
 ENV/icons/*
