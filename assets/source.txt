@@ -1,14 +1,39 @@
 ## This documents are use for referencing some git respositories, feel free to add ##
 
+## Base
 # ffmpeg-master
 https://git.ffmpeg.org/ffmpeg.git
 
+## Transcriber
 # Whisper
 https://github.com/openai/whisper.git
 
+## Image Creater
 # Stable-Diffusion-webui (AUTOMATIC1111)
 https://github.com/AUTOMATIC1111/stable-diffusion-webui.git
 
 # Stable-Diffusion-webui (Akegarasu)
 https://github.com/Akegarasu/stable-diffusion-webui.git
+
+## Chat 
+# VisualGLM
+https://github.com/THUDM/VisualGLM-6B.git
+
+# ChatGLM
+https://github.com/THUDM/ChatGLM-6B.git
+
+# langchain-ChatGLM
+https://github.com/imClumsyPanda/langchain-ChatGLM.git
+
+# ChatGLM-Tuning
+https://github.com/mymusise/ChatGLM-Tuning.git
+
+# GPT2
+https://github.com/openai/gpt-2.git
+
+# MOSS
+https://github.com/OpenLMLab/MOSS.git
+
+# ChatRWKV
+https://github.com/BlinkDL/ChatRWKV.git
 
