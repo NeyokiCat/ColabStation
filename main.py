@@ -1,7 +1,4 @@
 import os
-from tkinter import *
-
-main = Tk()
 PATH = os.path.dirname(__file__)
 PATH_to_Collection = os.path.join(os.path.dirname(__file__),"COllections")
 
@@ -23,7 +20,3 @@ def scan_for_env(): # Search all python.exe location under Collections
             print("")
 
 # scan_for_env()
-
-## Launch App ##
-main.title("ColabStation")
-##main.
