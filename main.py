@@ -1,8 +1,11 @@
 import os
-import math
 import pynvml
+import torch
+import json
+
 PATH = os.path.dirname(__file__)
 PATH_to_Collection = os.path.join(os.path.dirname(__file__),"COllections")
+
 class cmdline:
     import argparse
     parser = argparse.ArgumentParser(
@@ -18,7 +21,7 @@ def scan_GPU():
     for i in range(deviceCount):
         handle = pynvml.nvmlDeviceGetHandleByIndex(i)
         meminfo = pynvml.nvmlDeviceGetMemoryInfo(handle)
-        print("GPU", i, ":", pynvml.nvmlDeviceGetName(handle), meminfo.total)
+        print("GPU", i, ":", pynvml.nvmlDeviceGetName(handle), meminfo.total / (1024 ** 3))
     return i
 
 def scan_GPU_total_mem():
@@ -48,8 +51,13 @@ def scan_for_env(): # Search all python.exe location under Collections
             print(dir)
             find_env(os.path.join(PATH_to_Collection,dir))
             print("")
-
+            
+class llm():
+    def run_model(path_to_config,path_to_model,batch_size,device="GPU0"):
+        torch.device(device)
+        torch.compile(json.loads(path_to_config))
+        
 ## Test area ##
 # scan_for_env()
 # scan_GPU()
-print(scan_GPU_total_mem())
+# print(scan_GPU_total_mem())
